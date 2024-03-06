@@ -1,0 +1,13 @@
+- To install rasa :
+(pip install rasa) only few versions of python are supported by rasa like 3.7, 3.8, 3.9, 3.10
+https://www.python.org/ftp/python/3.9.6/python-3.9.6-amd64.exe (3.9 version with which it worked for me)
+Note : To run a particular version set environmental varialbes > path > select the one which we want
+- Run the following command in your terminal to initialize a new Rasa project.
+This command will create a new Rasa project structure with default files and directories.
+(rasa init --no-prompt)
+- domain.yml
+- actions.yml
+- rasa train
+- rasa run actions
+- rasa shell
+
