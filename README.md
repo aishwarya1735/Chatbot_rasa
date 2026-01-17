@@ -1,70 +1,49 @@
-This Machine Learning (ML) project allows you to control your entire PC using voice commands.
+Voice-Controlled PC Assistant
 
-The application can execute various tasks based on the provided voice input:
+It is a Machine Learning–based voice assistant that enables full PC control through voice commands. After secure user authentication, Leo automates system operations, applications, and daily information tasks, providing a hands-free and intelligent desktop experience.
 
-Automates YouTube,
+- Key Capabilities :
 
-Downloads YouTube videos,
+Control system functions: volume, brightness, battery status, screenshots, camera, alarms, shutdown, and restart
 
-Captures photos and videos,
+Media & app automation: YouTube (play & download), WhatsApp, Chrome, music playback
 
-Takes screenshots,
+Utilities & information: date, time, temperature, news updates, location, jokes, and facts
 
-Plays your favorite music,
+Productivity features: notes, reminders, and schedule notifications
 
-Adjusts volume and brightness,
+File access: open system drives (C, D, E, F)
 
-Automates WhatsApp,
+- Security & Authentication
 
-Controls Chrome,
+Face recognition–based user verification
 
-Provides the current temperature,
+Password authentication as a fallback if face recognition fails
 
-Shows the current date, day, and time,
+Commands are enabled only after successful authentication
 
-Gives daily news updates,
+- Face Recognition Setup
 
-Displays your current location,
+Run sample_generator.py to collect face samples (stored in the samples/ folder)
 
-Tells jokes and interesting facts,
+Run Model_Trainer.py to train the model and generate files in the trainer/ folder
 
-Shows PC battery status,
+- How to Run
 
-Opens C, D, E, and F drives,
+Install dependencies using requirements.txt
 
-Sets alarms,
+Start the assistant by running script.py
 
-Shuts down or restarts the PC,
+Activate using the voice command “Hey Rasa”
 
-Remembers and reminds notes,
+Authenticate and issue commands
 
-Notifies our schedule.
+Deactivate using “Sleep”, “You need a break”, or “Quit”
 
+Reactivate anytime with “Hey Rasa”
 
-Includes a security system with:
+- Additional Information
 
-Face Recognition (for user verification) >>
+Command handling logic is implemented in the exe() function
 
-Password (if face recognition fails) >>
-
-After passing the security checks, users can issue commands to perform any of the listed tasks.
-
-To set up face verification, follow these steps:
-
-Run sample_generator.py to gather sample images for face verification, which will be saved in the samples folder.
-Execute Model_Trainer.py to train these samples, creating a training file in the trainer folder.
-To use the Leo program, do the following:
-
-Install all required packages listed in requirements.txt.
-
-Start the program by running script.py.
-
-Activate the program by saying "hey Leo".
-
-Verify your identity through face recognition or password, then issue your commands.
-
-To deactivate, say "Sleep" or "you need a break" or "quit".
-
-Reactivate the program anytime with "hey Leo".
-
-For detailed input commands and password instructions, refer to the exe() and security() functions in Leo.py.
+Security workflow is defined in the security() function inside Rasa.py
